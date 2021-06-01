@@ -1,0 +1,152 @@
+{
+    "info": {
+		"name": "User_Management"
+    },
+    "item": [
+        {
+            "name": "Register",
+            "item": {
+                "name": "http://localhost:5001/api/auth/register",
+                "request": {
+                    "method": "POST",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": {
+                        "mode": "raw",
+                        "raw": {
+                            "firstName": "Shivani",
+                            "lastName": "Potdukhe",
+                            "email": "shivani@gmail.com",
+                            "password": "password",
+                            "organizationName": "Amazon"
+                        }
+                    },
+                    "url": {
+                        "raw": "http://localhost:5001/api/auth/register",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "5001",
+                        "path": [
+                            "api",
+                            "auth",
+                            "register"
+                        ]
+                    }
+                },
+                "response": {
+                    "data": {
+                        "firstName": "Shivani",
+                        "lastName": "Potdukhe",
+                        "email": "shivani10@gmail.com",
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCJ6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhbmkxMEBnbWFpbC5jb20iLCJpYXQiOjE2MjI1MzI3MzcsImV4cCI6MTYzMDMwODczN30.45172_YPyorReHHyERCqSOWqsOhdfYooWAXLKY-IpDo"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Login",
+            "item": {
+                "name": "http://localhost:5001/api/auth/login",
+                "request": {
+                    "method": "POST",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": {
+                        "mode": "raw",
+                        "raw": {
+                            "email": "shivani7@gmail.com",
+                            "password": "password"
+                        }
+                    },
+                    "url": {
+                        "raw": "http://localhost:5001/api/auth/login",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "5001",
+                        "path": [
+                            "api",
+                            "auth",
+                            "login"
+                        ]
+                    }
+                },
+                "response": {
+                    "data": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVC10.eyJlbWFpbCI6InNoaXZhbmk3QGdtYWlsLmNvbSIsImlhdCI6MTYyMjUzMjY4OCwiZXhwIjoxNjMwMzA4Njg4fQ.mzTXP9xZaviR-V4MWoAob5Rp25d90akoBCZ_sT00z68"
+                    }
+                }
+            }
+        },
+        {
+            "name": "UserList",
+            "item": {
+                "name": "http://localhost:5001/api/user",
+                "request": {
+                    "method": "GET",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "key": "Authorization",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhbmk3QGdtYWlsLmNvbSIsImlhdCI6MTYyMjUyNDEzOCwiZXhwIjoxNjMwMzAwMTM4fQ.XYqGGF77N65StiqxPdBfs6PiSPaRBpzy_ny1f67mfcz"
+                        }
+                    ],
+                    "body": {
+                        "mode": "raw",
+                        "raw": {
+                            "searchByFirstName": "shivani",
+                            "searchByLastName": "potdukhe",
+                            "sortBy": "employeeId",
+                            "page": 2,
+                            "pageSize": 2
+                        }
+                    },
+                    "url": {
+                        "raw": "http://localhost:5001/api/user",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "5001",
+                        "path": [
+                            "api",
+                            "user"
+                        ]
+                    }
+                },
+                "response": {
+                    "data": [
+                        {
+                            "firstName": "Shivani",
+                            "lastName": "Potdukhe",
+                            "email": "shivani2@gmail.com",
+                            "employeeId": 48,
+                            "organizationName": "Cuelogic"
+                        },
+                        {
+                            "firstName": "Shivani",
+                            "lastName": "Potdukhe",
+                            "email": "shivani3@gmail.com",
+                            "employeeId": 49,
+                            "organizationName": "Cuelogic"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
