@@ -24,8 +24,7 @@ This project will run on **NodeJs** using **MYSQL** as database.
 ### Clone and Install npm dependencies
 
 - git clone https://github.com/shivaniPotdukhe/User-Management-Application.git
-- cd Server
-- npm install
+- npm install(all dependencies)
 
 ## Project  structure
 ```
